@@ -4,12 +4,21 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-styleevent',
   template: 
   `
+
+
+    <div *ngFor="let car of cars; index as i">
+      <h2>{{i}} {{car}} </h2>
+    </div>  
+
    <h1 [style.color]="error ? 'red' : 'green' ">This is used bind the styles</h1>
    <h1 [ngStyle]="mulitsyles" > multi style properties</h1>
-
    <button (click)="myfunction($event)"> say hello </button>
    <button (click) = "greet='hai ganesh'"> greet function </button>
    <h2>{{greet}} </h2>
+   <input #nameInput type="text">
+   <button (click)="handleSubmit(nameInput.value)"> submit </button>
+   <input  type="text" [(ngModel)]="myname">
+    {{myname}}
 
 
   `,
@@ -17,6 +26,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StyleeventComponent implements OnInit {
 
+
+  public cars = [
+    "audi",
+    "bmw",
+    "ferrari",
+    "benz"
+  ]
+   public car ="audi "
+  public displayMyname= false;
+  public myname = ""
   public colorValue = "green"
   public error = false
   public mulitsyles ={
@@ -34,6 +53,9 @@ export class StyleeventComponent implements OnInit {
   }
   myfunction(event) {
    console.log(event)
+  }
+  handleSubmit(value) {
+    console.log("input value", value)
   }
   greetFunction() {
     return this.greet = "hello this is an angular tutorial"

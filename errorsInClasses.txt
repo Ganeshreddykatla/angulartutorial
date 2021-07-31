@@ -1,1 +1,3 @@
 1. event binding  (has to explian in live project)
+
+2. ngIf for  else block

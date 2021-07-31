@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { TestModule} from './test/test.module';
 import { UserComponent } from './user/user.component';
 import { DatabindingComponent } from './databinding/databinding.component'
-// import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { StyleeventComponent } from './styleevent/styleevent.component';
 
@@ -20,7 +20,7 @@ import { StyleeventComponent } from './styleevent/styleevent.component';
   imports: [
     BrowserModule,
     TestModule,
-    // FormsModule,
+    FormsModule,
     CommonModule
   ],
   providers: [],
