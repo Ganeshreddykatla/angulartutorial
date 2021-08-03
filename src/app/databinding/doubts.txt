@@ -1,0 +1,12 @@
+ <h2 [ngClass]="multiClass"> Angular Tutorial </h2>    
+
+
+ throwing error  
+ 
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+src/app/databinding/databinding.component.ts:11:10 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'h2'.
+
+11      <h2 [ngClass]="multiClass"> Angular Tutorial </h2>

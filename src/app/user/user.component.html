@@ -1,1 +1,21 @@
 
+  <h2> {{myDate | date: 'short'}} </h2>
+  <h2> {{myDate | date: 'shortDate'}} </h2>
+  <h2> {{myDate | date: 'shortTime'}} </h2>
+  <h2>
+     Pipes in Angular ( transforming data)
+  </h2>
+
+  <h2> {{ "ganesh" | uppercase }}</h2>
+  <h2> {{ "This is Angular Tutorial " | lowercase }}</h2>
+  <h2> {{ "this is angular tutorial"  | titlecase}}</h2>
+  <h2> {{ " this is angular tutorial" | slice:4:10 }} </h2>
+  <h2> {{user | json}} </h2>
+
+  <h2>{{3.123 | number: '3.2-3'}} </h2>
+  <h2>{{ 334.123 | number: '5.6-3'}}</h2>
+  <h2> {{  0.35 | percent}}  </h2>
+  <h2> {{ 125 | currency}}  </h2>
+  <h2> {{ 125 | currency:'INR'}}  </h2>
+  <h2> {{ 125 | currency: 'GBP'}}  </h2>
+  <h2> {{ 324 | currency: 'EUR': 'code'}} </h2>
