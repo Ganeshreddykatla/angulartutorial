@@ -8,6 +8,7 @@ import { DatabindingComponent } from './databinding/databinding.component'
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { StyleeventComponent } from './styleevent/styleevent.component';
+import { GetVoterPipe } from './get-voter.pipe';
 
 
 @NgModule({
@@ -15,7 +16,11 @@ import { StyleeventComponent } from './styleevent/styleevent.component';
     AppComponent,
     UserComponent,
     DatabindingComponent,
-    StyleeventComponent    /// came from user component
+    StyleeventComponent,
+    GetVoterPipe,
+// came from user component
+
+
   ],
   imports: [
     BrowserModule,

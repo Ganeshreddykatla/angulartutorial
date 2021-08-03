@@ -4,7 +4,13 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-styleevent',
   template: 
   `
-
+  <div [ngSwitch]= "'mahendra'">
+  <div *ngSwitchCase="'audi'">  this is audi car</div>
+  <div *ngSwitchCase="'bmw'">  this is bmw car</div>
+  <div *ngSwitchCase="'benz'">  this is benz car</div>
+  <div *ngSwitchCase="'ferrari'">  this is audi car</div>
+  <div *ngSwitchDefault>  this is Mahendra car</div>
+<div>
 
     <div *ngFor="let car of cars; index as i">
       <h2>{{i}} {{car}} </h2>

@@ -1,6 +1,25 @@
 
-<h2> </h2>
-<!-- <app-user></app-user>     -->
+<h2> {{message}} </h2>
+<app-user (childAction)="message=$event" [parent_data]='inputToChild'></app-user>    
 <!-- <app-databinding></app-databinding> -->
 <!-- came from the user component -->
-<app-styleevent></app-styleevent>
+<!-- <app-styleevent></app-styleevent> -->
+<!-- <div>  
+    <table> 
+
+      <thead>
+       <td> Voter name : </td>
+       <td>  Age : </td>
+       <td> Check Voter : </td>
+       </thead>
+       <tbody>
+        <tr *ngFor=' let a of userData '>
+          <td>{{a.name}}</td>
+          <td> {{a.age}}</td>
+          <td>{{a.checkVoter | getVoter}} </td>
+        </tr>
+       </tbody>
+    </table> 
+
+  <div> -->
+<!-- <app-child-component [parent_data]='inputToChild'></app-child-component> -->

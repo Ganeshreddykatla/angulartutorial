@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input, Output, EventEmitter} from '@angular/core';
+
 
 
 @Component({
@@ -13,8 +14,9 @@ import { Component, OnInit } from '@angular/core';
   <h2> {{getTitle()}}</h2>
     
   <input type="text" value="ganesh">
+   <h2> {{parentData}} </h2>
 
-
+   <button (click) =childCommunicate() > Send Data To Parent </button>
   </div>
   `,   /// view
   styleUrls: ['./user.component.css']     //style sheet for component
@@ -24,6 +26,9 @@ export class UserComponent implements OnInit {
   public page_title = "this is user component"
 
 
+  @Input('parent_data') public parentData ;
+
+  @Output() public childAction = new EventEmitter;
   constructor() { }
 
   ngOnInit(): void {
@@ -31,6 +36,9 @@ export class UserComponent implements OnInit {
   }
   getTitle() {
     return "hello Angular"
+  }
+  childCommunicate() {
+    this.childAction.emit('hai parent, good morning. IAM YOUR CHILD')
   }
 
 }
